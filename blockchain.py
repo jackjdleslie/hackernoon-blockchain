@@ -4,7 +4,7 @@ from textwrap import dedent
 from time import time
 from uuid import uuid4
 
-from flask import Flask
+from flask import Flask, jsonify, request
 
 
 class Blockchain(object):
@@ -177,7 +177,7 @@ def mine():
 def add_new_transaction():
     values = request.get_json()
 
-    # Check that the required fileds are in the POST'ed data
+    # Check that the required fields are in the POST'ed data
     required = ['sender', 'recipient', 'amount']
     if not all(k in values for k in required):
         return 'Missing values', 400
@@ -185,8 +185,7 @@ def add_new_transaction():
     # Create a new Transaction
     index = blockchain.new_transaction(values['sender'], values['recipient'], values['amount'])
 
-    msg = "Transaction will be added to Block" + index
-    response = {'message': msg}
+    response = {'message': f'Transaction will be added to Block {index}'}
     return jsonify(response), 201
 
 
