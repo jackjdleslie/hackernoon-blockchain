@@ -38,7 +38,13 @@ def mine():
         'previous_hash': block['previous_hash'],
     }
 
-    return jsonify(response), 200
+    # Hacky, but routes to /mined which renders mined.html
+    return "<script>window.location.replace('/mined')</script>"
+
+
+@app.route("/mined")
+def mined():
+    return render_template('mined.html')
 
 
 @app.route('/transactions/new', methods=['POST'])
@@ -101,6 +107,12 @@ def consensus():
         }
 
     return jsonify(response), 200
+
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
 
 @app.route("/")
 def home():
