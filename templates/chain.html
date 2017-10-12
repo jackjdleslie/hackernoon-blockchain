@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!--- JS --->
+    <script src="{{ url_for('static',filename='nav.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -20,33 +21,30 @@
 
   <body>
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Blockchain Online</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li class="active"><a href="/chain">Chain</a></li>
-          <li><a href="/mine">Mine</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div id="sidenav">
+      <a href="javascript:void(0)" class="close-nav" onclick="closeNav()">&times;</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a class="active" href="/chain">Chain</a>
+      <a href="/mine">Mine</a>
+    </div>
 
-    <div class="container">
-      <h1>Chain</h1>
-      <h2 class="length"></h2>
+    <div id="main">
+      <span class="open-nav" onclick="openNav()">&#9776;</span>
+      <div class="container">
+        <h1>Chain</h1>
+        <h2 class="length"></h2>
 
-      <div class="chain">
-        <!---
-        <div class="block">
-          <div class="index">1</div>
-          <p class="timestamp">Timestamp<br></p>
-          <p class="transactions">Transactions<br></p>
-          <p class="previous_hash">Previous Hash<br></p>
+        <div class="chain">
+          <!---
+          <div class="block">
+            <div class="index">1</div>
+            <p class="timestamp">Timestamp<br></p>
+            <p class="transactions">Transactions<br></p>
+            <p class="previous_hash">Previous Hash<br></p>
+          </div>
+          --->
         </div>
-        --->
       </div>
     </div>
 

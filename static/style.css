@@ -1,20 +1,93 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
+
 /*
 Typography
  */
+
 
 h1, h2, p, a {
   font-family: 'Inconsolata', monospace !important;
 }
 
+h1 {
+  font-weight: bold !important;
+}
+
+
+/*
+Nav
+ */
+
+
+ .active {
+   color: #f1f1f1 !important;
+ }
+
+ .open-nav {
+   cursor: pointer;
+   font-size: 30px;
+   transition: 0.5s;
+   -webkit-transition: 0.5s;
+   -moz-transition: 0.5s;
+   -o-transition: 0.5s;
+ }
+
+ .close-nav {
+   font-size: 50px !important;
+ }
+
+ #sidenav {
+     height: 100%;
+     width: 0;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: 0;
+     background-color: #111;
+     overflow-x: hidden;
+     transition: 0.5s;
+     -webkit-transition: 0.5s;
+     -moz-transition: 0.5s;
+     -o-transition: 0.5s;
+     padding-top: 60px;
+ }
+
+ #sidenav a {
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     font-size: 25px;
+     color: #818181;
+     display: block;
+ }
+
+ #sidenav a:hover {
+     color: #f1f1f1;
+ }
+
+ #sidenav .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 50px;
+ }
+
+ #main {
+     transition: margin-left .5s;
+     padding: 16px;
+ }
+
+ @media screen and (max-height: 450px) {
+   #sidenav {padding-top: 15px;}
+   #sidenav a {font-size: 18px;}
+ }
+
+
 /*
 Chain
-*/
+ */
 
-.length {
-  margin-top: -10px;
-}
 
 .block {
   display: inline-block;
@@ -42,4 +115,14 @@ Chain
 .previous_hash {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+
+/*
+Assets
+ */
+
+
+.message {
+  display: block;
 }
