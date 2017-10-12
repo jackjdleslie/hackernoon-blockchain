@@ -26,13 +26,36 @@
       <a href="/" onclick="closeNav()" class="active">Home</a>
       <a href="/about" onclick="closeNav()">About</a>
       <a href="/chain" onclick="closeNav()">Chain</a>
-      <a href="/mine"><img class="pickaxe" src="{{ url_for('static',filename='images/pickaxe.png') }}"/></a>
+      <a href="/mine" class="pickaxe"><img src="{{ url_for('static',filename='images/pickaxe.png') }}"/></a>
     </div>
 
     <div id="main">
       <span class="open-nav" onclick="openNav()">&#9776;</span>
       <div class="container">
         <h1>Home</h1>
+        <h2>Welcome to SEGCOIN</h2>
+        <div class="chain">
+          <div class="block">
+            <div class="index">What is SEGCOIN?</div>
+            <p>SEGCOIN is a decentralized, peer-to-peer digital transaction network based on
+            the same Blockchain Technology as Bitcoin and Ethereum.</p>
+          </div>
+          <div class="block">
+            <div class="index">Blockchain Technology?</div>
+            <p>A Blockchain is a list of blocks, where each block contains some data and a unique
+              link to the previous block in the chain.<br><br></p>
+          </div>
+          <div class="block">
+            <div class="index">What does that mean?</div>
+            <p>Once a block is added to the chain, it is linked with the previous chain in such
+            a way that if block data is then changed, the link breaks.</p>
+          </div>
+          <div class="block">
+            <div class="index">What good is that?</div>
+            <p>Since trying to change data on the chain will break the links, once data is in a
+              block it can't be changed without alerting the network.<br><br></p>
+          </div>
+        </div>
       </div>
     </div>
 

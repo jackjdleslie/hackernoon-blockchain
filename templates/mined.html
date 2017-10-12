@@ -23,10 +23,10 @@
 
     <div id="sidenav">
       <a href="javascript:void(0)" class="close-nav" onclick="closeNav()">&times;</a>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a class="active" href="/chain">Chain</a>
-      <a href="/mine"><img class="pickaxe" src="{{ url_for('static',filename='images/pickaxe.png') }}"/></a>
+      <a href="/" onclick="closeNav()">Home</a>
+      <a href="/about" onclick="closeNav()">About</a>
+      <a href="/chain" onclick="closeNav()">Chain</a>
+      <a href="/mine" class="pickaxe"><img src="{{ url_for('static',filename='images/pickaxe.png') }}"/></a>
     </div>
 
     <div id="main">

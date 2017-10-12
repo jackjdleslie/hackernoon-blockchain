@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Abel');
 
 
 /*
@@ -6,12 +7,24 @@ Typography
  */
 
 
-h1, h2, p, a {
+p, a, .index {
   font-family: 'Inconsolata', monospace !important;
 }
 
+h2 {
+  font-size: 30px !important;
+  font-family: 'Abel', sans-serif !important;
+}
+
 h1 {
+  font-size: 60px !important;
+  text-decoration: underline;
+  font-family: 'Inconsolata', monospace !important;
   font-weight: bold !important;
+}
+
+#main p {
+  font-size: 15px !important;
 }
 
 
@@ -26,7 +39,7 @@ Nav
 
  .open-nav {
    cursor: pointer;
-   font-size: 30px;
+   font-size: 40px;
    transition: 0.5s;
    -webkit-transition: 0.5s;
    -moz-transition: 0.5s;
@@ -34,7 +47,7 @@ Nav
  }
 
  .close-nav {
-   font-size: 50px !important;
+   font-size: 55px !important;
  }
 
  #sidenav {
@@ -59,6 +72,10 @@ Nav
      font-size: 25px;
      color: #818181;
      display: block;
+     transition: 0.1s;
+     -webkit-transition: 0.1s;
+     -moz-transition: 0.1s;
+     -o-transition: 0.1s;
  }
 
  #sidenav a:hover {
@@ -76,6 +93,7 @@ Nav
  #main {
      transition: margin-left .5s;
      padding: 16px;
+     padding-top:0;
  }
 
  @media screen and (max-height: 450px) {
@@ -94,20 +112,23 @@ Chain
   padding: 10px;
   margin-right: 50px;
   margin-top: 50px;
-  width: 200px;
-  height: 200px;
+  width: 215px;
+  height: 215px;
   border: solid 5px black;
   box-shadow: 5px -5px rgba(0, 0, 0, 0.3);
 }
 
 .block .index {
   font-weight: bold;
+  font-size: 16px;
   display: block;
   margin-left: -15px;
   margin-top: -15px;
   margin-bottom: 15px;
   padding: 4px;
-  width: 200px;
+  padding-left: 10px;
+  padding-bottom: 27px;
+  width: 215px;
   height: 35px;
   border: solid 5px black;
 }
@@ -123,22 +144,25 @@ Assets
  */
 
 
-.pickaxe {
-  width: 50px;
+.pickaxe img {
+  width: 40px;
   padding: 8px 8px 8px 0;
+  margin-left: 2px;
   text-decoration: none;
   display: block;
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
+  opacity: 0.5;
 }
 
-.pickaxe:hover {
+.pickaxe:hover img {
   transform: rotate(-40deg);
   -webkit-transform: rotate(-40deg);
   -moz-transform: rotate(-40deg);
   -o-transform: rotate(-40deg);
+  opacity: 1;
 }
 
 .message {

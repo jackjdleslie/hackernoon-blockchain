@@ -23,10 +23,10 @@
 
     <div id="sidenav">
       <a href="javascript:void(0)" class="close-nav" onclick="closeNav()">&times;</a>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a class="active" href="/chain">Chain</a>
-      <a href="/mine"><img class="pickaxe" src="{{ url_for('static',filename='images/pickaxe.png') }}"/></a>
+      <a href="/" onclick="closeNav()">Home</a>
+      <a href="/about" onclick="closeNav()">About</a>
+      <a href="/chain" onclick="closeNav()" class="active">Chain</a>
+      <a href="/mine" class="pickaxe"><img src="{{ url_for('static',filename='images/pickaxe.png') }}"/></a>
     </div>
 
     <div id="main">
@@ -67,6 +67,7 @@
       blockText += `<p class="timestamp"><b>Timestamp</b><br>${item.timestamp}</p>`;
       blockText += `<p class="transactions"><b>Transactions</b><br>${item.transactions.length}</p>`;
       blockText += `<p class="previous_hash"><b>Previous Hash</b><br>${item.previous_hash}</p>`;
+      blockText += '</div>';
       $('.chain').append(blockText);
     }
 
