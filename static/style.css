@@ -1,5 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
-h1 {
-  font-family: 'Inconsolata', monospace;
+/*
+Typography
+ */
+
+h1, h2, p, a {
+  font-family: 'Inconsolata', monospace !important;
+}
+
+/*
+Chain
+*/
+
+.length {
+  margin-top: -10px;
+}
+
+.block {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 50px;
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  border: solid 5px black;
+  box-shadow: 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+.block .index {
+  font-weight: bold;
+  display: block;
+  margin-left: -15px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  padding: 4px;
+  width: 200px;
+  height: 35px;
+  border: solid 5px black;
+}
+
+.previous_hash {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

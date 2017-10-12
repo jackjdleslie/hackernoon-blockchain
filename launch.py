@@ -63,7 +63,7 @@ def full_chain():
         'chain': blockchain.chain,
         'length': len(blockchain.chain),
     }
-    return jsonify(response), 200
+    return render_template('chain.html', data=response)
 
 
 @app.route('/nodes/register', methods=['POST'])
